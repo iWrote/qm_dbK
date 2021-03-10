@@ -2,11 +2,11 @@
 %REF: https://www.jstor.org/stable/2158264
 
 format short
-[ws,x] = wpfun('db1', 1, 3);
+[ws,x] = wpfun('db5', 1, 10);
 a = ws(1,:);
 b = ws(1,:);
 clf
-k = 3; n = 0;
+k = 0; n = 0;
 [bkn, xkn] = DT(b,x,k,n);  %keep n <= (2K - 1)(2^k - 1)
 %[bkn, xkn] = singlediff(bkn, xkn);
 hold on
@@ -15,7 +15,7 @@ plot(xkn,bkn)
 hold off
 
 %trapz( a .* a) * x(2)
-%trapz( upsample(a, round(x(2) / (xkn(2) - xkn(1)))) .* bkn ) * (xkn(2) - xkn(1))
+trapz( upsample(a, round(x(2) / (xkn(2) - xkn(1)))) .* bkn ) * (xkn(2) - xkn(1))
 
 function [DTw, DTx] = DT(w,x,k,n)   
     %keep n <= (2K - 1)(2^k - 1)
