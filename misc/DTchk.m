@@ -2,21 +2,22 @@
 %REF: https://www.jstor.org/stable/2158264
 
 format short
-[ws,x] = wpfun('db5', 1, 10);
+
+[ws,x] = wpfun('db3', 1, 20);
 a = ws(1,:);
 b = ws(1,:);
-clf
-k = 0; n = 0;
-[bkn, xkn] = DT(b,x,k,n);  %keep n <= (2K - 1)(2^k - 1)
-%[bkn, xkn] = singlediff(bkn, xkn);
+%clf
 hold on
-plot(x,a)
-plot(xkn,bkn)
+k =0; n = 0;
+[bkn, xkn] = DT(b,x,k,n);  %keep n <= (2K - 1)(2^k - 1)
+
+[bkn, xkn] = singlediff(bkn, xkn);
+[a, x] = singlediff(a, x);
+
 hold off
 
 %trapz( a .* a) * x(2)
-trapz( upsample(a, round(x(2) / (xkn(2) - xkn(1)))) .* bkn ) * (xkn(2) - xkn(1))
-
+[trapz( upsample(a, round(x(2) / (xkn(2) - xkn(1)))) .* bkn ) * (xkn(2) - xkn(1)), -2]
 function [DTw, DTx] = DT(w,x,k,n)   
     %keep n <= (2K - 1)(2^k - 1)
     DTw = w;
