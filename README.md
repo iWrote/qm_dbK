@@ -2,7 +2,7 @@
 Exploring variational methods in quantum mechanics using Daubechies' wavelets in MATLAB. 
 
 
-In this project we solve textbook 1D bound-state quantum mechanics problems with wavelet methods to recover known eigenvalues and eigenfunctions. We've written tutorials (.mlx notebooks in the "sopnotes" dir) to help others quickly reproduce our results and take the project further.
+In this project we solve textbook 1D bound-state quantum mechanics problems with wavelet methods to recover known solutions. We've written tutorials (.mlx notebooks in the "sopnotes" dir) to help others quickly reproduce our results and take the project further.
 
 While a Fourier transform creates a representation of a signal in the frequency domain, a wavelet transform creates a representation of the signal in both time (or space!) and frequency domains, thereby allowing efficient access of localized information about the signal.
 
