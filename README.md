@@ -15,4 +15,5 @@ Wavelet methods let you "peek" at the solution *at different resolutions in the 
 Picture showing wavelets recovering the profile of a sine wave. This was produced with approximation methods "peeking" at the solutions of the particle-in-a-box PDE.
 
 
+![example2](https://github.com/iWrote/qm_dbK/blob/master/misc/desperatemaybe.png) 
 
