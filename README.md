@@ -11,5 +11,8 @@ Intuitively, it tells you not only *what* frequencies are there in your signal, 
 Now consider a bound-state problem governed by a complicated PDE that you can neither work out on paper nor compute an exact solution for in the entire domain. 
 Wavelet methods let you "peek" at the solution *at different resolutions in the regions you care about*. For example, you can produce low resolution solutions to equations describing the outskirts of a molecule, and compute higher resolution solutions in the critical regions.  
 
+![example](https://github.com/iWrote/qm_dbK/blob/master/misc/fit_strange.png)
+Picture showing wavelets recovering the profile of a sine wave. This was produced with approximation methods "peeking" at the solutions of the particle-in-a-box PDE.
+
 
 
